@@ -74,6 +74,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
 
     @database_sync_to_async
     def save_message(self, sender, room_name, message):
+        
         try:
             receiver = None
             if sender:
